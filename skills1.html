@@ -3,70 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SKILLS</title>
+    <title>BIO</title>
     <style>
-            html, body{
-                margin: 0;
-                height: 100%;
-                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-                overflow: hidden;
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #000;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #fff;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: aqua;
+        }
+            #vbg {
+                width: 100vw;
+                height: 100vh;
+                object-fit: cover;
+                position: fixed;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                z-index: -1;
             }
-            .bg{
-                background-image: url('media/bg.jpg');
-                height: 100%;
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-            }
-            a {
-                text-decoration: none;
-            }
-			header {
-				display: flex;
-				justify-content: center;
-				padding: 10px;
-			}
-			.navbar {
-				padding: 25px;
-			}
-			.navbar a {
-				padding: 0 50px 0 50px;
-				color: whitesmoke;
-			}
-            .navbar a:hover {
-                color: aqua;
-            }
-			.container {
-				margin: 0 100px 0 100px;
-				padding: 50px;
-				border: 2px solid whitesmoke;
-                border-radius: 15px;
-				display: grid;
-				grid-template-columns: auto auto auto auto;
-				justify-content: center;
-			}
-			.box {
-				margin: 20px;
-                padding: 0 5px 0 5px;
-			}
-            .name {
-                color: aqua;
-                text-transform: uppercase;
-            }
-            .descrip {
-                color: whitesmoke;
-            }
-
             * {
+                margin: 0;
                 box-sizing: border-box;
+                font-family: Arial, Helvetica, sans-serif;
             }
-            .mySlides {
+        .gallcon {
+          position: absolute;
+          right: 0;
+          margin: 0 150px 0 0;
+        }
+        img {
+          width: 625px;
+          right: 0;
+          margin: 0 10px 0 0;
+        }
+        h1 {
+          color: aqua;
+          text-transform: uppercase;
+        }
+        .menu a, p {
+          font-size: medium;
+          font-weight: bold;
+        }
+        .txtcon {
+          padding: 0 15px 0 15px;
+        }
+        .prevvp {
+          padding-top: 300px;
+        }
+
+        .menu {
+          display: flex;
+          justify-content: center;
+          text-align: center;
+        }
+        .menu a{
+          padding: 35px 50px 35px 50px;
+          color: whitesmoke;
+          text-decoration: none;
+        }
+        .menu a:hover {
+          color: aqua;
+        }
+        .main {
+          margin: 0 100px 0 100px;
+          padding: 30px 50px 30px 50px;
+          border: 2px solid whitesmoke;
+          border-radius: 15px;
+          color: whitesmoke;
+        }
+
+        .mySlides {
                 display: none;
-            }
-            img {
-                vertical-align: middle;
-            }
-            .slideshow-container {
+        }
+        .slideshow-container {
                 max-width: 1000px;
                 position: relative;
                 margin: auto;
@@ -77,7 +93,7 @@
                 top: 50%;
                 width: auto;
                 padding: 16px;
-                margin-top: 200px;
+                margin-top: 150px;
                 color: white;
                 font-weight: bold;
                 font-size: 18px;
@@ -89,7 +105,7 @@
                 right: 150px;
                 border-radius: 3px 0 0 3px;
             }
-            .prevp:hover, .nextp:hover {
+            .prevp:hover {
                 background-color: aqua;
             }
             .prev, .next {
@@ -112,15 +128,6 @@
             }
             .prev:hover, .next:hover {
                 background-color: rgba(0,0,0,0.8);
-            }
-            .text {
-                color: #f2f2f2;
-                font-size: 15px;
-                padding: 8px 12px;
-                position: absolute;
-                bottom: 8px;
-                width: 100%;
-                text-align: center;
             }
             .numbertext {
                 color: #f2f2f2;
@@ -150,93 +157,156 @@
                 from {opacity: .4}
                 to {opacity: 1}
             }
-            @media only screen and (max-width: 300px) {
+            @media only screen and (max-width: 375px) {
                 .prev, .next,.text {font-size: 11px}
             }
-            .descrip {
-                font-size: 18px;
+
+
+        @media only screen and (max-width:800px) {
+            .menu, .main {
+              width: 100%;
             }
+            .main {
+              margin: 0;
+            }
+            .menu {
+              display: block;
+            }
+            .gallcon {
+              position: relative;
+            }
+            .prevvp {
+              padding: 0;
+            }
+            .prevp, .nextp {
+              margin: 10px 0 0 0;
+            }
+            h1 {
+              margin: 25px 0 0 0;
+            }
+            p {
+              margin: 0 0 35px 0;
+            }
+        }
+        @media only screen and (max-width:375px) {
+            .menu, .main {
+              width: 100%;
+            }
+            .main {
+              margin: 0;
+            }
+            .menu {
+              display: block;
+            }
+            .menu a {
+              position: relative;
+              padding: 10px;
+            }
+            .gallcon {
+              position: relative;
+            }
+            .gallvid {
+              width: 275px;
+            }
+            .prev, .next {
+              display: none;
+            }
+            img {
+              width: 275px;
+            }
+            .prevp, .nextp {
+              padding: 200px 0 5px 1px;
+            }
+            h1 {
+              margin: 10px 0 0 0;
+            }
+            p {
+              margin: 0 0 25px 0;
+            }
+            .dot {
+              margin: 0;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="bg">
-    <header>
-        <nav class="navbar">
+        <div class="menu">
             <a href="index.html">BIO</a>
-            <a href="">SKILLS</a>
+            <a href="skills.html">SKILLS</a>
             <a href="fam.html">FAMILY</a>
-            <a href="resto.html">RESTAURANT</a>
+            <a href="resto.html">RESTAURANT</a><br>
             <a href="FormReg/index.html">FORM</a>
             <a href="FormReg/reg.html">REGISTRATION</a>
-        </nav>
-    </header>
-    <div class="container">
-        <a class="prevp" href="skills.html">❮❮</a>
-        <a class="nextp" href="skills2.html">❯❯</a>
-        <div class="box">
-        <div class="name">
-            <h1>COOKING</h1>
         </div>
-        <div class="descrip">
-            <p>Since I own our family restaurant Kainan ni Apollos,<br> I also studied culinary.
-                I enrolled and finished my<br> cooking course at the Center for Asian Culinary Arts<br> (CACS).
-                I also act as a sous-chef for our Chef at KNA.
-            </p>
-        </div>
-        </div>
-        <div class="box">
-            <div class="slideshow-container">
 
-                <div class="mySlides fade">
-                  <div class="numbertext">1 / 3</div>
-                  <video src="media/cook.mp4" style="width:100%" autoplay loop></video>
-                </div>
-                
-                <div class="mySlides fade">
-                  <div class="numbertext">2 / 3</div>
-                  <img src="media/cook1.jpg" style="width:100%">
-                </div>
-                
-                <div class="mySlides fade">
-                  <div class="numbertext">3 / 3</div>
-                  <img src="media/cook2.jpg" style="width:100%">
-                </div>
-                <a class="prev" onclick="plusSlides(-1)">❮</a>
-                <a class="next" onclick="plusSlides(1)">❯</a>
+        <div class="main"><div class="gallcon">
+          <div class="slideshow-container">
 
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+              <div class="gallvid"><video src="media/cook.mp4" style="width:100%" autoplay controls loop></video></div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="media/cook1.jpg">
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="media/cook2.jpg">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> 
                 </div>
-                <br>
-                
-                <div style="text-align:center">
-                  <span class="dot" onclick="currentSlide(1)"></span> 
-                  <span class="dot" onclick="currentSlide(2)"></span> 
-                  <span class="dot" onclick="currentSlide(3)"></span> 
-                </div>
-</div>
-    <script>
-    let slideIndex = 1;
-        showSlides(slideIndex);
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-    }
-    function currentSlide(n) {
-        showSlides(slideIndex = n);
-    }
-    function showSlides(n) {
-        let i;
-        let slides = document.getElementsByClassName("mySlides");
-        let dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = slides.length}
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-        }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
-    }
-        </script>
+              </div>
+          <div class="txtcon"><h1>COOKING</h1><br>
+          <p>Since I own our family restaurant Kainan ni<br> Apollos, I also studied culinary.
+            I enrolled and<br> finished my cooking course at the Center for<br> Asian Culinary Arts (CACS).
+            I also act as a<br> sous-chef for our Chef at KNA.
+          </p></div>
+          <div class="prevvp">
+            <a class="prevp" href="skills.html">❮❮</a>
+            <a class="nextp" href="skills2.html">❯❯</a></div>
+        </div>
+
+
+        <video id="vbg" autoplay loop muted poster="">
+          <source src="media/bg.mp4" type="video/mp4">
+        </video>
+
+        <script>
+          let slideIndex = 1;
+              showSlides(slideIndex);
+          function plusSlides(n) {
+              showSlides(slideIndex += n);
+          }
+          function currentSlide(n) {
+              showSlides(slideIndex = n);
+          }
+          function showSlides(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";
+              }
+              for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+              }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+          }
+              </script>
 </body>
 </html>
