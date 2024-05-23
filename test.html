@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIO</title>
+    <style>
+        html, body{
+            margin: 0;
+            height: 100%;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            overflow: hidden;
+        }
+        .bg{
+            background-image: url('media/bg.jpg');
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: #fff;
+        }
+* {
+  box-sizing: border-box;
+}
+.menu {
+  display: flex;
+    justify-content: center;
+}
+.menu a{
+    padding: 15px;
+    color: whitesmoke;
+}
+.main {
+    border: 2px solid whitesmoke;
+  overflow: hidden;
+}
+
+@media only screen and (max-width:800px) {
+  /* For tablets: */
+  .main {
+    width: 80%;
+    padding: 0;
+  }
+}
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  .menu, .main {
+    width: 100%;
+  }
+}
+    </style>
+</head>
+<body>
+    <div class="bg">
+
+
+    <div style="overflow:auto">
+        <div class="menu">
+            <a href="">BIO</a>
+            <a href="skills.html">SKILLS</a>
+            <a href="fam.html">FAMILY</a>
+            <a href="resto.html">RESTAURANT</a>
+            <a href="FormReg/index.html">FORM</a>
+            <a href="FormReg/reg.html">REGISTRATION</a>
+        </div>
+      
+        <div class="main">
+          <h2>The Walk</h2>
+          <p>The walk from Monterosso to Riomaggiore will take you approximately two hours, give or take an hour depending on the weather conditions and your physical shape.</p>
+          <img src="media/ken.png" style="width:100%">
+        </div>
+    
+    
+    </div>
+</body>
+</html>
