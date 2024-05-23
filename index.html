@@ -5,113 +5,154 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BIO</title>
     <style>
-            html, body{
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #000;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #fff;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: aqua;
+        }
+            #vbg {
+                width: 100vw;
+                height: 100vh;
+                object-fit: cover;
+                position: fixed;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                z-index: -1;
+            }
+            * {
                 margin: 0;
-                height: 100%;
-                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-                overflow: hidden;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: Arial, Helvetica, sans-serif;
             }
-            .bg{
-                background-image: url('media/bg.jpg');
-                height: 100%;
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
+        .imgcon {
+          position: absolute;
+          right: 0;
+          margin: 0 150px 0 0;
+        }
+        .imgcon:hover{
+          filter: drop-shadow(0 0 0.25rem aqua);
+        }
+        img {
+          border-radius: 500px;
+          width: 400px;
+        }
+        h1 {
+          color: aqua;
+          text-transform: uppercase;
+        }
+        .menu a, p {
+          font-size: medium;
+          font-weight: bold;
+        }
+        .txtcon {
+          padding: 0 15px 0 15px;
+        }
+        .socials {
+          padding-top: 250px;
+          color: whitesmoke;
+        }
+        .icon:hover {
+          filter: drop-shadow(0 0 0.25rem aqua);
+        }
+        .icon {
+          width: 50px;
+        }
+
+        .menu {
+          display: flex;
+          justify-content: center;
+        }
+        .menu a{
+          padding: 35px 50px 35px 50px;
+          color: whitesmoke;
+          text-decoration: none;
+        }
+        .menu a:hover {
+          color: aqua;
+        }
+        .main {
+          margin: 0 100px 0 100px;
+          padding: 30px 50px 30px 50px;
+          border: 2px solid whitesmoke;
+          border-radius: 15px;
+          color: whitesmoke;
+        }
+
+        @media only screen and (max-width:800px) {
+            .main {
+              width: 80%;
+              padding: 0;
+              margin: 0;
             }
-            a {
-                text-decoration: none;
+            .imgcon {
+              position: relative;
             }
-			header {
-				display: flex;
-				justify-content: center;
-				padding: 10px;
-			}
-			.navbar {
-				padding: 25px;
-			}
-			.navbar a {
-				padding: 0 50px 0 50px;
-				color: whitesmoke;
-			}
-            .navbar a:hover {
-                color: aqua;
+            img {
+              width: 100%;
+              margin: 10px 0 0 25px;
             }
-			.container {
-				margin: 0 100px 0 100px;
-				padding: 0 50px 0 50px;
-				border: 2px solid whitesmoke;
-                border-radius: 15px;
-				display: grid;
-				grid-template-columns: auto auto auto auto;
-				justify-content: center;
-			}
-			.box {
-				margin: 20px;
-                padding: 0 5px 0 5px;
-                justify-content: left;
-			}
-            .name {
-                color: aqua;
-                text-transform: uppercase;
+        }
+        @media only screen and (max-width:375px) {
+            .menu, .main {
+              width: 100%;
             }
-            .descrip, .socials {
-                color: whitesmoke;
+            .main {
+              margin: 0;
+            }
+            .menu a {
+              position: relative;
+              padding: 20px 10px 20px 10px;
+            }
+            .imgcon {
+              position: relative;
+            }
+            img {
+              width: 100%;
+              margin: 10px 0 0 25px;
             }
             .socials {
-                padding-top: 250px;
+              padding: 5px 0 5px 1px;
             }
-            .icon:hover {
-                filter: drop-shadow(0 0 0.25rem aqua);
+            p {
+              font-size: 15px;
             }
-            .icon {
-                width: 50px;
-            }
-            .imgcon img {
-                width: 100%;
-                border-radius: 500px;
-            }
-            .imgcon img:hover{
-                filter: drop-shadow(0 0 0.25rem aqua);
-            }
-            .descrip {
-                font-size: 18px;
-            }
+        }
     </style>
 </head>
 <body>
-    <div class="bg">
-    <header>
-        <nav class="navbar">
-            <a href="test.html">BIO</a>
+        <div class="menu">
+            <a href="">BIO</a>
             <a href="skills.html">SKILLS</a>
             <a href="fam.html">FAMILY</a>
-            <a href="resto.html">RESTAURANT</a>
+            <a href="resto.html">RESTAURANT</a><br>
             <a href="FormReg/index.html">FORM</a>
             <a href="FormReg/reg.html">REGISTRATION</a>
-        </nav>
-    </header>
-    <div class="container">
-        <div class="box">
-        <div class="name">
-            <h1>Apollos R. Magsumbol</h1>
         </div>
-        <div class="descrip">
-            <p>I am a BA-MM 4th year student at St.Louis College of Valenzuela.<br>
-                I am the owner of Kainan ni Apollos Restaurant.<br>
-                I am a Dance, Martial Artist and a Black Belt at Arnis Kali Rapado Style.<br>
-                I am a Culinary graduate in Center for Asian Culinary Arts.
-            </p>
+
+        <div class="main">
+          <div class="imgcon"><img src="media/bio.jpg"></div>
+          <div class="txtcon"><h1>Apollos R. Magsumbol</h1><br>
+          <p>I am a BA-MM 4th year student at St.Louis College of Valenzuela.<br>
+            I am the owner of Kainan ni Apollos Restaurant.<br>
+            I am a Dance, Martial Artist and a Black Belt at Arnis Kali Rapado Style.<br>
+            I am a Culinary graduate in Center for Asian Culinary Arts.
+          </p></div>
+          <div class="socials"><a href="https://www.facebook.com/profile.php?id=100092654722184"><img class="icon" src="media/facebook.svg"></a></div>
         </div>
-        <div class="socials">
-            <a href="https://www.facebook.com/profile.php?id=100092654722184"><img class="icon" src="media/facebook.svg"></a>
-        </div>
-        </div>
-        <div class="box">
-        <div class="imgcon">
-            <img src="media/bio.jpg">
-        </div>
-        </div>
-    </div>
-</div>
+
+
+        <video id="vbg" autoplay loop muted poster="">
+          <source src="media/bg.mp4" type="video/mp4">
+        </video>
 </body>
 </html>
