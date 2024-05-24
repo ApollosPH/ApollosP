@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="website icon" type="png" href="media/logo.png">
-    <title>REGISTER</title>
+    <title>FORM</title>
     <style>
         ::-webkit-scrollbar {
             width: 10px;
@@ -19,8 +19,8 @@
             background: aqua;
         }
             #vbg {
-                width: 100vw;
-                height: 100vh;
+                width: 100%;
+                height: 100%;
                 object-fit: cover;
                 position: fixed;
                 left: 0;
@@ -31,73 +31,101 @@
             }
             * {
                 margin: 0;
-                padding: 0;
                 box-sizing: border-box;
                 font-family: Arial, Helvetica, sans-serif;
             }
-            a {
-                text-decoration: none;
-            }
-			header {
-				display: flex;
-				justify-content: center;
-				padding: 10px;
-			}
-			.navbar {
-				padding: 25px;
-			}
-			.navbar a {
-				padding: 0 50px 0 50px;
-				color: whitesmoke;
-			}
-            .navbar a:hover {
-                color: aqua;
-            }
-            .con{
-                border: 2px solid #fff;
-				margin: 0 100px 50px 100px;
-                background: rgba(0,0,0,0.8);
-            }
-			.container {
-				padding: 0 50px 0 50px;
-				display: grid;
-				grid-template-columns: auto auto auto auto;
-				justify-content: center;
-			}
-            @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
-            .con {
+        h1 {
+          color: aqua;
+          text-transform: uppercase;
+        }
+        .menu a {
+          font-size: medium;
+          font-weight: bold;
+        }
+
+        .menu {
+          display: flex;
+          justify-content: center;
+          text-align: center;
+        }
+        .menu a{
+          padding: 35px 50px 35px 50px;
+          color: whitesmoke;
+          text-decoration: none;
+        }
+        .menu a:hover {
+          color: aqua;
+        }
+        .main {
+          margin: 0 100px 0 100px;
+          padding: 15px 25px 15px 25px;
+          border: 2px solid whitesmoke;
+          background: rgba(0,0,0,0.8);
+          color: whitesmoke;
+        }
+        @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+            .main {
                 -webkit-backdrop-filter: blur(10px);
                 backdrop-filter: blur(10px);
                 }
             }
-			.box {
-				margin: auto;
+
+            .container {
+                padding: 0 50px 0 50px;
+                display: grid;
+                grid-template-columns: auto auto auto auto;
+                justify-content: center;
+            }
+            .box {
+                margin: auto;
                 padding: 0 5px 0 5px;
                 justify-content: center;
                 color: #fff;
-			}
-            .img {
-                filter: grayscale();
+            }
+            img {
+                width: 150px;
+            }
+            .img1 {
+              filter: grayscale();
             }
             .text {
                 text-align: center;
+                padding: 5px;
                 color: aqua;
             }
             .text1 {
                 text-align: left;
             }
             .text2 {
-                text-align: center;
+                margin: 0 50px 0 50px;
             }
             .text3 {
-                text-align: right;
+                margin: 0;
+            }
+            .text4 {
+                text-align: center;
             }
             .brd {
                 border-bottom: 4px double #ffffff;
                 margin: 0 50px 15px 50px;
             }
             .brd1 {
+                border-top: 2px solid #ffffff;
+                border-left: 2px solid #ffffff;
+                border-right: 2px solid #ffffff;
+                border-bottom: 4px double #ffffff;
                 margin: 15px 50px 0 50px;
+            }
+            .brd2 {
+                border-bottom: 2px solid #ffffff;
+                border-left: 2px solid #ffffff;
+                border-right: 2px solid #ffffff;
+                margin: 0 50px 0 50px;
+            }
+            .ul {
+                text-decoration: underline;
+                margin: 15px 50px 15px 50px;
+                color: aqua;
             }
             .tab {
                 display: inline-flex;
@@ -131,6 +159,27 @@
             label {
                 margin-top: 3px;
             }
+            input[type=submit],input[type=button] {
+                padding: 10px 50px 10px 50px;
+                font-size: medium;
+                font-weight: bold;
+            }
+            input[type=submit]:hover ,input[type=button]:hover {
+                background: aqua;
+            }
+            .container1 {
+                padding: 0 50px 0 50px;
+                display: grid;
+                grid-template-columns: auto auto auto auto;
+                justify-content: center;
+            }
+            .but {
+                margin-top: 15px;
+            }
+            label {
+                font-size:medium ;
+                font-weight: bold;
+            }
             .ple {
                 border: 2px dashed white;
                 text-align: center;
@@ -143,297 +192,347 @@
             table, th, td {
                 border:1px solid rgb(61, 61, 61);
             }
-            input[type=submit],input[type=button] {
-                padding: 10px 50px 10px 50px;
-                font-size: medium;
-                font-weight: bold;
+
+
+
+        @media only screen and (max-width:800px) {
+            .menu, .main {
+              width: 100%;
             }
-            input[type=submit]:hover ,input[type=button]:hover {
-                background: aqua;
+            .main {
+              margin: 0;
             }
-            .but {
-                margin-top: 15px;
+            .menu {
+              display: block;
             }
+        }
+        @media only screen and (max-width:375px) {
+            .menu, .main {
+              width: 100%;
+            }
+            .main {
+              margin: 0;
+            }
+            .menu {
+              display: block;
+            }
+            .menu a {
+              position: relative;
+              padding: 10px;
+            }
+
+            .tab, .container {
+              display: block;
+            }
+            .container {
+              padding: 5px 25px 5px 25px;
+            }
+            .container1 {
+              padding: 0;
+            }
+            .text, .box {
+              padding: 0;
+            }
+            h3 {
+              margin: 0;
+            }
+            .ul, .but {
+              margin: 0;
+            }
+            .img {
+              margin: 0 0 0 65px;
+            }
+            label {
+              font-size: smaller;
+              margin: 0;
+            }
+            .brd, .brd1, .brd2 {
+              margin: 0;
+            }
+            .ple {
+              padding: 0 25px 0 25px;
+            }
+        }
     </style>
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <a href="../index.html">BIO</a>
-            <a href="../skills.html">SKILLS</a>
-            <a href="../fam.html">FAMILY</a>
-            <a href="../resto.html">RESTAURANT</a>
+        <div class="menu">
+            <a href="index.html">BIO</a>
+            <a href="skills.html">SKILLS</a>
+            <a href="fam.html">FAMILY</a>
+            <a href="resto.html">RESTAURANT</a><br>
             <a href="index.html">FORM</a>
             <a href="reg.html">REGISTRATION</a>
-        </nav>
-    </header>
-    <div class="con">
+        </div>
 
-        <form action="submitreg.html" method="get">
+        <div class="main">
         <div class="brd">
+          <div class="container">
+              <div class="box">
+                  <div class="img">
+                      <img src="media/logo.png">
+                  </div>
+              </div>
+              <div class="box">
+                  <div class="text4">
+                      <h2>St. Louis College Valenzuela</h2>
+                      <p>#005 Maysan Road, Valenzuela City, Metro Manila, Philippines 1440</p>
+                      <p>Tel. Nos. 292-0481; E-mail: slcv@vasia.com; FB page: slvcollege</p>
+                      <h2>COLLEGE DEPARTMENT</h2>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="brd">
             <div class="container">
                 <div class="box">
-                        <img src="media/logo.png" style="width: 150px;">
+                    <div class="text">
+                        <h2>REGISTRATION PROCEDURE</h2><br>
+                    </div>
+                        <div class="text1">
+                        <p>1. Present your credentials to the Dean/Registrar thru, the Office of the Registrar.</p>
+                        <p>2. Secure Registration Card from the Registrar's Office and fill it up completely. No
+                            change should be made in the subjects without prior approval of the Dean/Registrar.
+                        </p>
+                        <p>3. Go to the Accounting Department for assessment.</p>
+                        <p>4. Pay your fees at the Cashier's Window.</p>
+                        <p>5. Present your registration card at the Registrar's Office for confirmation of enrolled status.</p>
+                        <div class="img">
+                        <img class="img1" src="media/logo.png"></div><p>www.slcv.edu.ph</p><br>
+                        </div>
                 </div>
                 <div class="box">
-                    <div class="text2">
-                        <h2>St. Louis College Valenzuela</h2>
-                        <p>#005 Maysan Road, Valenzuela City, Metro Manila, Philippines 1440</p>
-                        <p>Tel. Nos. 292-0481; E-mail: slcv@vasia.com; FB page: slvcollege</p>
-                        <h2>COLLEGE DEPARTMENT</h2>
+                    <div class="text"><br>
+                        <h2>REGISTRATION RULES</h2><br>
                     </div>
-                </div>
-            </div>
-            </div>
-
-    <div class="brd">
-    <div class="container">
-        <div class="box">
-            <div class="text"><br>
-                <h2>REGISTRATION PROCEDURE</h2><br>
-            </div>
-                <div class="text1">
-                <p>1. Present your credentials to the Dean/Registrar thru, the Office of the Registrar.</p>
-                <p>2. Secure Registration Card from the Registrar's Office and fill it up completely. No
-                    change should be made in the subjects without prior approval of the Dean/Registrar.
-                </p>
-                <p>3. Go to the Accounting Department for assessment.</p>
-                <p>4. Pay your fees at the Cashier's Window.</p>
-                <p>5. Present your registration card at the Registrar's Office for confirmation of enrolled status.</p>
-                <div class="img">
-                <img src="media/logo.png"></div><p>www.slcv.edu.ph</p><br>
-                </div>
-        </div>
-        <div class="box">
-            <div class="text"><br>
-                <h2>REGISTRATION RULES</h2><br>
-            </div>
-                <div class="text1">
-                <p>1.Changes in subjects, dropping of subjects, and enrollment in additional subjects must be accomplished
-                    before the deadline, on a separate form called "dropping/changing form".
-                </p>
-                <p>2. Cancellation of registration must be accomplished on the prescribed form and must have the approval
-                    of the Dean/Registrar.
-                </p>
-                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                </div>
-        </div>
-    </div>
-    </div>
-
-    <div class="container">
-        <div class="box">
-            <div class="text">
-                <h2>STUDENT'S INFORMATION CARD</h2>
-            </div>
-        </div>
-    </div>
-
-    <div class="brd">
-    <div class="text2">
-        <div class="box">
-            <div class="text1"><br>
-                <div class="tab"><h3>Last Name:</h3><input type="text" name="lname" required/><h3>First Name:</h3><input type="text" name="fname" required/><h3>Middle Name:</h3><input type="text" name="mname" required/></div>
-                <div class="tab"><h3>Sex:</h3><input type="text" name="sex"/></div>
-                <div class="tab"><h3>Civil Status:</h3><input type="text" name="cs"/></div>
-                <div class="tab"><h3>Nationality:</h3><input type="text" name="nationl"/></div>
-                <div class="tab"><h3>Religion:</h3><input type="text" name="religion"/></div>
-                <div class="tab"><h3>Contact Number:</h3><input type="text" name="connum"/></div><br>
-                <div class="tab"><h3>Age:</h3><input type="text" name="age"/></div>
-                <div class="tab"><h3>Date of Birth:</h3><input type="date" name="datbir"/></div>
-                <div class="tab"><h3>Place of Birth:</h3><input type="text" name="plabir"/></div><br>
-                <div class="tab"><h3>City Address:</h3><input type="text" name="citadd"/></div><br>
-                <div class="tab"><h3>Provincial Address:</h3><input type="text" name="proadd"/></div><br><br>
-
-                <div class="tab"><h3>Father's Name:</h3><input type="text" name="fatname"/></div>
-                <div class="tab"><h3>Occupation:</h3><input type="text" name="foccup"/></div><br>
-                <div class="tab"><h3>Mother's Name:</h3><input type="text" name="motname"/></div>
-                <div class="tab"><h3>Occupation:</h3><input type="text" name="moccup"/></div><br>
-
-                <div class="tab"><h3>EMERGENCY 24/7 PARENT'S NUMBER:</h3><input type="number" name="emernum"/></div><br>
-                <div class="tab"><h3>Tuition paid by:</h3>
-                    <label for="tpA"><input type="radio" name="tp" value="Student"/> Student</label>
-                    <label for="tpB"><input type="radio" name="tp" value="Parent"/> Parent</label>
-                    <label for="tpC"><input type="radio" name="tp" value="Sponsor"/> Sponsor</label><input type="text" name="sponsor"/></div><br><br>
-
-                    <div class="tab"><h3>Elementary Course Completed at:</h3><input type="text" name="elem"/></div>
-                    <div class="tab"><h3>Year Graduated:</h3><input type="number" name="elemyg" placeholder="YYYY" min="2000" max="2025"></div><br>
-                    <div class="tab"><h3>Junior High School Completed at:</h3><input type="text" name="junior"/></div>
-                    <div class="tab"><h3>Year Graduated:</h3><input type="number" name="junioryg" placeholder="YYYY" min="2000" max="2025"></div><br>
-                    <div class="tab"><h3>Senior High School Completed at:</h3><input type="text" name="senior"/></div>
-                    <div class="tab"><h3>Year Graduated:</h3><input type="number" name="senioryg" placeholder="YYYY" min="2000" max="2025"></div><br>
-                    <div class="tab"><h3>School Last attended <i>(if Transferee)</i>:</h3><input type="text" name="schla"/></div>
-                    <div class="tab"><h3>Year:</h3><input type="number" name="schlayg" placeholder="YYYY" min="2000" max="2025"></div><br><br>
-
-                    <div class="text1">
-                        <h3>Credential Submitted: (Pls. Check only)</h3>
-                        <label for="csA"><input type="checkbox" name="cs" value="Honorable Dismissal"/> Honorable Dismissal</label><br>
-                        <label for="csB"><input type="checkbox" name="cs" value="Transcript of Records"/> Transcript of Records</label><br>
-                        <label for="csC"><input type="checkbox" name="cs" value="ACR No."/> ACR No.<input type="number" name="acrnum"/></label><br>
-                        <label for="csD"><input type="checkbox" name="cs" value="Recognition/Naturalization Paper"/> Recognition/Naturalization Paper</label><br>
-                        <label for="csE"><input type="checkbox" name="cs" value="Study-Permit"/> Study-Permit</label><br><br>
-                    </div>
-                    <div class="ple">
-                        <h3>PLEDGE</h3><br>
-                        <p>I shall abide by the registration rules printed on the Student's Copy of this registration card,
-                            to pay my tuition and other fees, and to comply with all existing rules and regulations of ST.
-                            LOUIS COLLEGE <i><b>VALENZUELA</b></i> and those that may be promulgated and/or amended from
-                            time to time.
+                        <div class="text1">
+                        <p>1.Changes in subjects, dropping of subjects, and enrollment in additional subjects must be accomplished
+                            before the deadline, on a separate form called "dropping/changing form".
                         </p>
-                        <br>
-                        <div class="text3">
-                        <input type="text" name="studsig"/></div>
-                        <p style="text-align: right; padding-top: 3px;"><i>Student's Signature</i></p>
+                        <p>2. Cancellation of registration must be accomplished on the prescribed form and must have the approval
+                            of the Dean/Registrar.
+                        </p>
+                        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                        </div>
+                </div>
+            </div>
+            </div>
+        
+            <div class="container">
+                <div class="box">
+                    <div class="text">
+                        <h2>STUDENT'S INFORMATION CARD</h2>
                     </div>
                 </div>
-        </div>
-    </div><br>
-    </div>
-
-    <div class="brd1"><br>
-        <div class="box">
-            <div class="text3">
-                <h2 style="color: aqua;">REGISTRATION CARD</h2></div><br>
-                <div class="text3">
-                    <div class="tab"><h3>Student Number:</h3><input type="number" name="studnum"/></div>
-                    <div class="tab"><h3>Date:</h3><input type="date" name="regdate"/></div>
-                <div class="text1"><br>
-                <div class="tab"><h3>Last Name:</h3><input type="text" name="rclname" required/><h3>First Name:</h3><input type="text" name="rcfname" required/><h3>Middle Name:</h3><input type="text" name="rcmname" required/></div>
-                <div class="tab">
-                    <label for="semA"><input type="radio" name="sem" value="Sem1"/> 1st Sem</label>
-                    <label for="semB"><input type="radio" name="sem" value="Sem2"/> 2nd Sem</label>
-                    <label for="semC"><input type="radio" name="sem" value="Summer"/> Summer</label></div>
-                    <div class="tab"><h3>Course:</h3><input type="text" name="regcourse"/></div>
-                    <div class="tab">
-                        <h3>C.Y.</h3>
-                        <input type="number" placeholder="YYYY" min="2000" max="2024">-<input type="number" placeholder="YYYY" min="2001" max="2025"></div><br>
-                        <br>
-                        <div class="tab">
-                            <h3>Year:</h3>
-                            <label for="yearA"><input type="radio" name="year" value="year1"/> I</label>
-                            <label for="yearB"><input type="radio" name="year" value="year2"/> II</label>
-                            <label for="yearC"><input type="radio" name="year" value="year3"/> III</label>
-                            <label for="yearB"><input type="radio" name="year" value="year2"/> IV</label>
-                            <label for="yearC"><input type="radio" name="year" value="irreg"/> Irregular</label></div>
-                        <div class="tab">
-                            <h3>Status:</h3>
-                            <label for="statA"><input type="radio" name="stat" value="stat1"/> Old</label>
-                            <label for="statB"><input type="radio" name="stat" value="stat2"/> New</label></div>
-                            <div class="tab">
-                                <h3>School Fees:</h3>
-                                <label for="sfA"><input type="radio" name="sf" value="sf1"/> Cash</label>
-                                <label for="sfB"><input type="radio" name="sf" value="sf2"/> Installment</label></div>
-                            <table style="width:100%">
-                                <tr>
-                                    <th>SUBJECTS</th>
-                                    <th>Time</th>
-                                    <th>Days</th>
-                                    <th>Room</th>
-                                    <th>Units</th>
-                                </tr>
-                                <tr>
-                                    <td>1. </td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>2. </td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>3. </td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>4. </td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>5. </td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>6. </td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>7. </td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>8. </td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>9. </td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>10. </td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td>Total Regular:</td>
-                                    <td>0</td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td>Total Tutorial:</td>
-                                    <td>0</td>
-                                </tr>
-                            </table><br><br>
-                    </div>
             </div>
-        </div>
-    </div>
+        
+            <div class="brd">
+            <div class="text2">
+                <div class="box">
+                    <div class="text1"><br>
+                        <div class="tab"><h3>Last Name:</h3><input type="text" name="lname" required/><h3>First Name:</h3><input type="text" name="fname" required/><h3>Middle Name:</h3><input type="text" name="mname" required/></div>
+                        <div class="tab"><h3>Sex:</h3><input type="text" name="sex"/></div>
+                        <div class="tab"><h3>Civil Status:</h3><input type="text" name="cs"/></div>
+                        <div class="tab"><h3>Nationality:</h3><input type="text" name="nationl"/></div>
+                        <div class="tab"><h3>Religion:</h3><input type="text" name="religion"/></div>
+                        <div class="tab"><h3>Contact Number:</h3><input type="text" name="connum"/></div><br>
+                        <div class="tab"><h3>Age:</h3><input type="text" name="age"/></div>
+                        <div class="tab"><h3>Date of Birth:</h3><input type="date" name="datbir"/></div>
+                        <div class="tab"><h3>Place of Birth:</h3><input type="text" name="plabir"/></div><br>
+                        <div class="tab"><h3>City Address:</h3><input type="text" name="citadd"/></div><br>
+                        <div class="tab"><h3>Provincial Address:</h3><input type="text" name="proadd"/></div><br><br>
+        
+                        <div class="tab"><h3>Father's Name:</h3><input type="text" name="fatname"/></div>
+                        <div class="tab"><h3>Occupation:</h3><input type="text" name="foccup"/></div><br>
+                        <div class="tab"><h3>Mother's Name:</h3><input type="text" name="motname"/></div>
+                        <div class="tab"><h3>Occupation:</h3><input type="text" name="moccup"/></div><br>
+        
+                        <div class="tab"><h3>EMERGENCY 24/7 PARENT'S NUMBER:</h3><input type="number" name="emernum"/></div><br>
+                        <div class="tab"><h3>Tuition paid by:</h3>
+                            <label for="tpA"><input type="radio" name="tp" value="Student"/> Student</label>
+                            <label for="tpB"><input type="radio" name="tp" value="Parent"/> Parent</label>
+                            <label for="tpC"><input type="radio" name="tp" value="Sponsor"/> Sponsor</label><input type="text" name="sponsor"/></div><br><br>
+        
+                            <div class="tab"><h3>Elementary Course Completed at:</h3><input type="text" name="elem"/></div>
+                            <div class="tab"><h3>Year Graduated:</h3><input type="number" name="elemyg" placeholder="YYYY" min="2000" max="2025"></div><br>
+                            <div class="tab"><h3>Junior High School Completed at:</h3><input type="text" name="junior"/></div>
+                            <div class="tab"><h3>Year Graduated:</h3><input type="number" name="junioryg" placeholder="YYYY" min="2000" max="2025"></div><br>
+                            <div class="tab"><h3>Senior High School Completed at:</h3><input type="text" name="senior"/></div>
+                            <div class="tab"><h3>Year Graduated:</h3><input type="number" name="senioryg" placeholder="YYYY" min="2000" max="2025"></div><br>
+                            <div class="tab"><h3>School Last attended <i>(if Transferee)</i>:</h3><input type="text" name="schla"/></div>
+                            <div class="tab"><h3>Year:</h3><input type="number" name="schlayg" placeholder="YYYY" min="2000" max="2025"></div><br><br>
+        
+                            <div class="text1">
+                                <h3>Credential Submitted: (Pls. Check only)</h3>
+                                <label for="csA"><input type="checkbox" name="cs" value="Honorable Dismissal"/> Honorable Dismissal</label><br>
+                                <label for="csB"><input type="checkbox" name="cs" value="Transcript of Records"/> Transcript of Records</label><br>
+                                <label for="csC"><input type="checkbox" name="cs" value="ACR No."/> ACR No.<input type="number" name="acrnum"/></label><br>
+                                <label for="csD"><input type="checkbox" name="cs" value="Recognition/Naturalization Paper"/> Recognition/Naturalization Paper</label><br>
+                                <label for="csE"><input type="checkbox" name="cs" value="Study-Permit"/> Study-Permit</label><br><br>
+                            </div>
+                            <div class="ple">
+                                <h3>PLEDGE</h3><br>
+                                <p>I shall abide by the registration rules printed on the Student's Copy of this registration card,
+                                    to pay my tuition and other fees, and to comply with all existing rules and regulations of ST.
+                                    LOUIS COLLEGE <i><b>VALENZUELA</b></i> and those that may be promulgated and/or amended from
+                                    time to time.
+                                </p>
+                                <br>
+                                <div class="text3">
+                                <input type="text" name="studsig"/></div>
+                                <p style="text-align: right; padding-top: 3px;"><i>Student's Signature</i></p>
+                            </div>
+                        </div>
+                </div>
+            </div><br>
+            </div>
+        
+            <div class="brd1"><br>
+                <div class="box">
+                    <div class="text3">
+                        <h2 style="color: aqua;">REGISTRATION CARD</h2></div><br>
+                        <div class="text3">
+                            <div class="tab"><h3>Student Number:</h3><input type="number" name="studnum"/></div>
+                            <div class="tab"><h3>Date:</h3><input type="date" name="regdate"/></div>
+                        <div class="text1"><br>
+                        <div class="tab"><h3>Last Name:</h3><input type="text" name="rclname" required/><h3>First Name:</h3><input type="text" name="rcfname" required/><h3>Middle Name:</h3><input type="text" name="rcmname" required/></div>
+                        <div class="tab">
+                            <label for="semA"><input type="radio" name="sem" value="Sem1"/> 1st Sem</label>
+                            <label for="semB"><input type="radio" name="sem" value="Sem2"/> 2nd Sem</label>
+                            <label for="semC"><input type="radio" name="sem" value="Summer"/> Summer</label></div>
+                            <div class="tab"><h3>Course:</h3><input type="text" name="regcourse"/></div>
+                            <div class="tab">
+                                <h3>C.Y.</h3>
+                                <input type="number" placeholder="YYYY" min="2000" max="2024">-<input type="number" placeholder="YYYY" min="2001" max="2025"></div><br>
+                                <br>
+                                <div class="tab">
+                                    <h3>Year:</h3>
+                                    <label for="yearA"><input type="radio" name="year" value="year1"/> I</label>
+                                    <label for="yearB"><input type="radio" name="year" value="year2"/> II</label>
+                                    <label for="yearC"><input type="radio" name="year" value="year3"/> III</label>
+                                    <label for="yearB"><input type="radio" name="year" value="year2"/> IV</label>
+                                    <label for="yearC"><input type="radio" name="year" value="irreg"/> Irregular</label></div>
+                                <div class="tab">
+                                    <h3>Status:</h3>
+                                    <label for="statA"><input type="radio" name="stat" value="stat1"/> Old</label>
+                                    <label for="statB"><input type="radio" name="stat" value="stat2"/> New</label></div>
+                                    <div class="tab">
+                                        <h3>School Fees:</h3>
+                                        <label for="sfA"><input type="radio" name="sf" value="sf1"/> Cash</label>
+                                        <label for="sfB"><input type="radio" name="sf" value="sf2"/> Installment</label></div>
+                                    <table style="width:100%">
+                                        <tr>
+                                            <th>SUBJECTS</th>
+                                            <th>Time</th>
+                                            <th>Days</th>
+                                            <th>Room</th>
+                                            <th>Units</th>
+                                        </tr>
+                                        <tr>
+                                            <td>1. </td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2. </td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>3. </td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>4. </td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>5. </td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>6. </td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>7. </td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>8. </td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>9. </td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>10. </td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td>Total Regular:</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td>Total Tutorial:</td>
+                                            <td>0</td>
+                                        </tr>
+                                    </table><br><br>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="container1">
+                <div class="box">
+                    <div class="but">
+                        <input type="submit" value="Submit">
+                        <a href="reg.html"><input type="button" value="Cancel"></a></div>
+                </div>
+            </div>
 
-    <div class="container">
-        <div class="box">
-            <div class="but">
-                <input type="submit" value="Submit">
-                <a href="reg.html"><input type="button" value="Cancel"></a></div>
         </div>
-    </div>
 
-    <br><br>
-</form>
-    </div>
-	<video id="vbg" autoplay loop muted poster="">
-		<source src="media/vbg.mp4" type="video/mp4">
-	</video>
+
+        <video id="vbg" autoplay loop muted poster="">
+          <source src="media/vbg.mp4" type="video/mp4">
+        </video>
+
 </body>
 </html>
